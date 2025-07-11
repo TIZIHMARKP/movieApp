@@ -4,8 +4,8 @@ import dotenv from 'dotenv';
 // const API_KEY = import.meta.env.API_KEY
 // const BASE_URL = import.meta.env.BASE_URL
 
-const API_KEY = "Your API key Here"
-const BASE_URL = "YOur base Url key here"
+const API_KEY = "8a52cc80037ceff77e8f8fdaa028df82"
+const BASE_URL = "https://api.themoviedb.org/3"
 
 
 export const getPopularMovies = async () => {
