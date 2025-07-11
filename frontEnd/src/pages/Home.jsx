@@ -25,18 +25,27 @@ function Home(){
         }
 
         loadPopularMovies();
-    }, [])
+    }, []);
 
-    // const movies = [
-    //     {id: 1, title: "John Wick", release_date: "2021"},
-    //     {id: 2, title: "Tom & jerry", release_date: "2021"},
-    //     {id: 3, title: "Daniel in the lions", release_date: "2021"},
-    //     {id: 4, title: "Terminator", release_date: "2021"},
-    // ]
+    const handleSearch = async (e) => {
+        e.preventDefault();
 
-    const handleSearch = (e) => {
-        e.preventDefault()
-        alert(searchQuery)
+        if(!searchQuery.trim()) return   // trim removes all empty spaces
+
+        // searching charaters of movie
+        setLoading(true)
+        try {
+            
+            const searchResults = await searchMovies(searchQuery);
+            setMovies(searchResults);
+            setError(null);
+        } catch (error) {
+            console.error("Error searchig movie: ",error);
+            setError("Failed to search movies...");
+        } finally {
+            setLoading(false);
+        }
+
         setSearchQuery("")
     };
 
@@ -53,13 +62,21 @@ function Home(){
                 <button type="submit" className="search-button">Search</button>
             </form>
 
-            <div className="movies-grid">
-                {movies.map((movie) =>
-                 movie.title.toLowerCase().startsWith(searchQuery) &&
-                (
-                    <MovieCard movie={movie} key={movie.id} />
-                ))}
-            </div>
+            { error && <div className="error-message">{error}</div>}
+
+            {loading ? (
+                <div className="loading">Loading...</div>
+            ): 
+                <div className="movies-grid">
+                    {movies.map((movie) =>
+                    movie.title.toLowerCase().startsWith(searchQuery) &&
+                    (
+                        <MovieCard movie={movie} key={movie.id} />
+                    ))}
+                </div>
+            }
+
+            
         </div>
     )
 }
