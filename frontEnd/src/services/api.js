@@ -4,13 +4,13 @@ import dotenv from 'dotenv';
 // const API_KEY = import.meta.env.API_KEY
 // const BASE_URL = import.meta.env.BASE_URL
 
-const API_KEY = "8a52cc80037ceff77e8f8fdaa028df82"
-const BASE_URL = "https://api.themoviedb.org/3"
+const API_KEY = "Your API Key"
+const BASE_URL = "Your URL"
 
 
 export const getPopularMovies = async () => {
     const response = await fetch(`${BASE_URL}/movie/popular?api_key=${API_KEY}`);
-    const data = await response.json()
+    const data = await response.json();
     return data.results
 };
 
