@@ -1,4 +1,4 @@
-# 🎬 R🤴YAL Movie - JavaScript Edition  
+# 🎬 R🤴YAL Movie APP
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
@@ -73,5 +73,3 @@ Distributed under the MIT License.
 ## 📧 Contact  
 
 Mark Marko - [@MarkMarko1234](https://x.com/MarkMarko1234) - princetmk10@gmail.com  
-
-Project Link: [https://github.com/TIZIHMARKP/private_MovieApp.git](https://github.com/TIZIHMARKP/private_MovieApp.git)
