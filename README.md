@@ -72,6 +72,6 @@ Distributed under the MIT License.
 
 ## 📧 Contact  
 
-Mark Marko - [@yourtwitter](https://x.com/MarkMarko1234) - princetmk10@gmail.com  
+Mark Marko - [@MarkMarko1234](https://x.com/MarkMarko1234) - princetmk10@gmail.com  
 
 Project Link: [https://github.com/TIZIHMARKP/private_MovieApp.git](https://github.com/TIZIHMARKP/private_MovieApp.git)
